@@ -142,6 +142,8 @@ background-color: #fcb020;
    
     transition: all 1s ease-in-out;
     cursor: pointer;
+    background-repeat: no-repeat;
+    object-fit: cover;
 
 }
 .box:hover{
@@ -166,6 +168,9 @@ box-shadow: 0 0 4px #fff;
  background-size: cover;
  padding-top: 120px;
  background-position: center;
+ background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
 }
 .cont{
     margin:30px auto;
@@ -199,6 +204,9 @@ gap: 20px;
     height: 100px;
     width: auto;
     background-color: #fcb020;
+    margin: 5px;
+
+  border-radius: 10px
 }
 form{
     width: 370px;
@@ -244,21 +252,24 @@ button{
     display: flex;
     gap: 30px;
     margin: 20px 10px;
+    justify-content: space-evenly;
 }
 .dm{
     height: 100%;
-    width: 30%;
+    width: 35%;
+    overflow: hidden;
 
 }
 .dp{
     height: 100%;
-    width: 70%;
+    width: 45%;
+    overflow: hidden;
     
 }
 .images{
     height: 100%;
     width: 100%;
-    padding-right: 20px;
+   
 }
 .cta{
     padding: 80px 20px 80px;
@@ -297,11 +308,15 @@ footer{
 .click{
     height: 40vh;
     width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 
 }
 .taste{
     height: 100%;
-    width: 60%;
+    width: 50%;
+    overflow: hidden;
+
 }
 .ch{
     height: 50px;
@@ -325,6 +340,11 @@ left: 40%;
 .foodie{
     height: 100%;
     width: 40%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    overflow: hidden;
+    
 }
 
 
@@ -411,6 +431,7 @@ left: 40%;
           .foodie{
             height: 100%;
             width: 100%;
+            padding: 10px;
           }
           .ch{
             left: 10%;
@@ -480,22 +501,27 @@ left: 40%;
   }
   .dm{
     height: 100%;
-    width: 100%;
+    width: 90%;
   }
   .dp{
     height: 100%;
-    width: 100%;
+    width: 90%;
   }
   .click{
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .taste{
     height: 100%;
-    width: 100%;
+    width: 100%;padding-left: 10px;
+    padding-right: 10px;
   }
   .foodie{
     height: 100%;
     width: 100%;
+    display: flex;
+    padding: 10px;
   }
   
 
