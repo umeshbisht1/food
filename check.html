@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #myNavbar a,
+        #myNavbar img {
+            float: left;
+            display: block;
+            /* color: #f2f2f2; */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #myNavbar a:hover {
+            background-color: #dadada6f;
+            color: black;
+        }
+
+        #myNavbar a.icon {
+
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            #myNavbar a,
+            #myNavbar img {
+                float: none;
+                display: block;
+                width: 100%;
+                text-align: left;
+                box-sizing: border-box;
+            }
+            .end{
+                text-align: end;
+                padding-right: 70px;
+            }
+
+            #myNavbar a:not(:first-child) {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            #myNavbar a.icon {
+                text-align: end;
+                display: block;
+            }
+
+            #myNavbar.responsive a.icon {
+                position: absolute;
+                top: 0;
+                text-align: end;
+            }
+
+            #myNavbar.responsive .end {
+                display: block;
+              text-align: end;
+              padding-right: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar" id="myNavbar">
+      
+        <a href="#home" class="end">Home</a>
+        <a href="#about" class="end">About</a>
+        <a href="#services" class="end">Services</a>
+        <a href="#contact" class="end">Contact</a>
+        <a href="#" class="icon" id="click" onclick="myFunction()">
+            &#9776;
+        </a>
+    </div>
+
+    <!-- Your page content goes here -->
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myNavbar");
+
+            if (x.className === "navbar") {
+                document.getElementById("click").innerHTML = 'X';
+                x.className = " responsive";
+            } else {
+                document.getElementById("click").innerHTML = '&#9776';
+                x.className = "navbar";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
